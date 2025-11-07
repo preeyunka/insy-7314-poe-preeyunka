@@ -11,7 +11,9 @@
     "audit:fix": "npm audit fix",
     "prestart": "npm audit --audit-level=moderate",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint frontend/src/**/*.js backend/src/**/*.js",
+    "test": "jest",
+    "sca:audit": "npm audit --audit-level=moderate"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -28,9 +30,15 @@
     "xss-clean": "^0.1.4"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "jest": "^29.0.0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC"
 }
+
+
+
+
